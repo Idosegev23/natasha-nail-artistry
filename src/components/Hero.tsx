@@ -10,7 +10,7 @@ const Hero = () => {
           <img
             src={natashaLogo}
             alt="נטשה פרידמן דובינסקי - Nail Master"
-            className="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-primary shadow-warm object-cover"
+            className="w-52 h-52 rounded-full mx-auto mb-6 border-4 border-primary shadow-warm object-cover"
           />
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-2">
             נטשה פרידמן דובינסקי
