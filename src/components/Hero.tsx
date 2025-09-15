@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Instagram } from "lucide-react";
-import natashaProfile from "@/assets/natasha-profile.jpg";
+import natashaLogo from "@/assets/natasha-logo.png";
 
 const Hero = () => {
   return (
@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <img
-            src={natashaProfile}
+            src={natashaLogo}
             alt="נטשה פרידמן דובינסקי - Nail Master"
             className="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-primary shadow-warm object-cover"
           />
