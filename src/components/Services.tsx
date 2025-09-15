@@ -23,35 +23,30 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-background">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            השירותים שלי
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            מגוון רחב של שירותי יופי וטיפוח לציפורניים ברמה הגבוהה ביותר
-          </p>
-        </div>
+    <section className="py-6 px-6">
+      <div className="mb-4">
+        <h2 className="text-xl font-bold text-primary mb-2 text-center">
+          🌟 השירותים שלי 🌟
+        </h2>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-gradient-card p-6 rounded-2xl shadow-soft hover:shadow-warm transition-all duration-300 text-center group"
-            >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
+      <div className="grid grid-cols-2 gap-3">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="bg-gradient-to-br from-white to-rose-50/50 p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center group border border-rose-100"
+          >
+            <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">
+              {service.icon}
             </div>
-          ))}
-        </div>
+            <h3 className="text-sm font-semibold text-primary mb-2">
+              {service.title}
+            </h3>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              {service.description}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

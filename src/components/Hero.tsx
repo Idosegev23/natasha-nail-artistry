@@ -4,67 +4,72 @@ import natashaLogo from "@/assets/natasha-logo.png";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-warm min-h-screen flex items-center justify-center py-20 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="mb-8">
-          <img
-            src={natashaLogo}
-            alt="נטשה פרידמן דובינסקי - Nail Master"
-            className="w-52 h-52 rounded-full mx-auto mb-6 border-4 border-primary shadow-warm object-cover"
-          />
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-2">
-            נטשה פרידמן דובינסקי
-          </h1>
-          <h2 className="text-2xl md:text-3xl text-secondary font-semibold mb-6">
-            Nail Master
-          </h2>
-        </div>
+    <section className="pt-8 pb-6 px-6 text-center">
+      {/* Profile Section */}
+      <div className="mb-6">
+        <img
+          src={natashaLogo}
+          alt="נטשה פרידמן דובינסקי - Nail Master"
+          className="w-32 h-32 rounded-full mx-auto mb-4 border-3 border-primary shadow-lg object-cover"
+        />
+        <h1 className="text-2xl font-bold text-primary mb-1">
+          נטשה פרידמן דובינסקי
+        </h1>
+        <h2 className="text-lg text-secondary font-semibold mb-3">
+          💅 Nail Master 💅
+        </h2>
+      </div>
 
-        <div className="mb-8">
-          <p className="text-lg md:text-xl text-accent mb-8 max-w-2xl mx-auto leading-relaxed">
-            לק ג'ל • מניקור יסודי ותיקון מבנה אנטומי • פדיקור • מיני פדיקור
+      {/* Services */}
+      <div className="mb-6">
+        <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-4 mb-4">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            ✨ לק ג'ל • מניקור יסודי ותיקון מבנה אנטומי<br/>
+            🦶 פדיקור • מיני פדיקור ✨
           </p>
         </div>
+      </div>
 
-        <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8 text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <MapPin className="w-5 h-5 text-primary" />
-            <span>הציונות 86, אשקלון</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Phone className="w-5 h-5 text-primary" />
-            <a href="tel:0547849514" className="hover:text-primary transition-colors">
-              054-7849514
-            </a>
-          </div>
-          <div className="flex items-center gap-2">
-            <Instagram className="w-5 h-5 text-primary" />
-            <a 
-              href="https://www.instagram.com/natasha.nails29" 
-              className="hover:text-primary transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @natasha.nails29
-            </a>
-          </div>
+      {/* Contact Info */}
+      <div className="space-y-3 mb-6 text-sm">
+        <div className="flex items-center justify-center gap-2 text-gray-600">
+          <MapPin className="w-4 h-4 text-primary" />
+          <span>הציונות 86, אשקלון</span>
         </div>
-
-        <Button
-          asChild
-          size="lg"
-          className="bg-gradient-primary hover:shadow-warm transition-all duration-300 text-lg px-8 py-4 rounded-xl"
-        >
+        <div className="flex items-center justify-center gap-2 text-gray-600">
+          <Phone className="w-4 h-4 text-primary" />
+          <a href="tel:0547849514" className="hover:text-primary transition-colors">
+            054-7849514
+          </a>
+        </div>
+        <div className="flex items-center justify-center gap-2 text-gray-600">
+          <Instagram className="w-4 h-4 text-primary" />
           <a 
-            href="https://wa.me/972547849514"
+            href="https://www.instagram.com/natasha.nails29" 
+            className="hover:text-primary transition-colors"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2"
           >
-            💬 קבעי תור עכשיו
+            @natasha.nails29
           </a>
-        </Button>
+        </div>
       </div>
+
+      {/* CTA Button */}
+      <Button
+        asChild
+        size="sm"
+        className="w-full bg-gradient-primary hover:shadow-lg transition-all duration-300 text-base py-3 rounded-xl"
+      >
+        <a 
+          href="https://wa.me/972547849514"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2"
+        >
+          💬 קבעי תור עכשיו
+        </a>
+      </Button>
     </section>
   );
 };

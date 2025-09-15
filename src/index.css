@@ -114,3 +114,96 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Bento Grid Custom Styles */
+  .bento-item {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .bento-item:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Custom backdrop blur for modal */
+  .modal-backdrop {
+    backdrop-filter: blur(8px) brightness(0.3);
+  }
+  
+  /* Smooth image loading animation */
+  .image-fade-in {
+    animation: fadeInScale 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Gradient overlays */
+  .gradient-overlay-warm {
+    background: linear-gradient(45deg, 
+      hsl(var(--primary) / 0.1), 
+      hsl(var(--accent) / 0.1),
+      transparent
+    );
+  }
+  
+  /* Custom scrollbar for modal */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
+  }
+  
+  /* Digital Business Card Styles */
+  .digital-card {
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.25),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+  
+  .digital-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  }
+  
+  /* Mobile-first responsive design */
+  @media (min-width: 768px) {
+    .digital-card {
+      max-width: 400px;
+    }
+  }
+  
+  /* Smooth transitions for all interactive elements */
+  .interactive-element {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .interactive-element:hover {
+    transform: translateY(-2px);
+  }
+}
