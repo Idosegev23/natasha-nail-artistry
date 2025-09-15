@@ -160,7 +160,6 @@ const Gallery = () => {
             @natasha.nails29
           </a>
         </div>
-      </div>
 
       {/* Image Modal */}
       {selectedImage !== null && (
